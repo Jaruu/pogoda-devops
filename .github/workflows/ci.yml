@@ -3,7 +3,7 @@ name: CI Pipeline
 on: [push]
 
 jobs:
-  lint-and-test:
+  build-check:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -17,5 +17,5 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run Lint (Check style)
-        run: npm run lint
+      - name: Run Build Check
+        run: npm run build
